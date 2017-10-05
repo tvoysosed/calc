@@ -1,27 +1,114 @@
 '''
 #include <iostream>
-   //~[._.]~
-using namespace std;
 
+   //   ш
+   // {._.}
+   //  ~|~
+   //  / \
+
+using namespace std;
 int main (int argc, char* argv[])
 {
-cout << "count: " << argc - 1 << endl;
-for (int i = 1; i < argc, i++)
-   {
-   cout << "argv[ " << i << "]: " << argv [i] << endl;
-   }
+std::cout << "Выберите операцию [+, -, *, /, %, ^, !, &, |, <, >]:" << std::endl;
 char opera;
-opera = argv[2] [0];
+int a, b;
+std::cin >> opera >> endl;
 switch (opera)
    {
    case '+':
-   cout << atoi(argv[1]) + atoi(argv[3]) << endl;
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите второе число" << std::endl;
+   std::cin >> b >> std::endl;
+   std::cout << a + b << std::endl;
    break;
+   
    case '-': 
-   cout << atoi(argv[1]) - atoi(argv[3]) << endl;
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите второе число" << std::endl;
+   std::cin >> b >> std::endl;
+   std::cout << a - b << std::endl;
    break;
+   
+   case '*': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите второе число" << std::endl;
+   std::cin >> b >> std::endl;
+   std::cout << a * b << std::endl;
+   break;
+   
+   case '/': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите второе число" << std::endl;
+   std::cin >> b >> std::endl;
+   if (b != 0) {
+      std::cout << a / b << std::endl;
+      break;
+   } else {
+       std::cout << "На 0 делить нельзя" << std::endl
+   
+   /// дальше доделать
+   
+   
+   
+   
+   
+   
+   case '%': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите второе число" << std::endl;
+   std::cin >> b >> std::endl;
+   std::cout << atoi(argv[1]) - atoi(argv[3]) << std::endl;
+   break;
+   
+   case '^': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите степень" << std::endl;
+   std::cin >> b >> std::endl;
+   std::cout << atoi(argv[1]) - atoi(argv[3]) << std::endl;
+   break;
+   
+   case '!': 
+   std::cout << "Введите число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << atoi(argv[1]) - atoi(argv[3]) << std::endl;
+   break;
+   
+   case '&': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите второе число" << std::endl;
+   std::cin >> b >> std::endl;
+   std::cout << atoi(argv[1]) - atoi(argv[3]) << std::endl;
+   break;
+   
+   case '|': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << "Введите второе число" << std::endl;
+   std::cin >> b >> std::endl;
+   std::cout << atoi(argv[1]) - atoi(argv[3]) << std::endl;
+   break;
+   
+   case '<': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << atoi(argv[1]) - atoi(argv[3]) << std::endl;
+   break;
+   
+   case '>': 
+   std::cout << "Введите первое число" << std::endl;
+   std::cin >> a >> std::endl ;
+   std::cout << atoi(argv[1]) - atoi(argv[3]) << std::endl;
+   break;
+   
    default:
-   cerr << "error";
+   std::cerr << "error";
    }
 }
 '''
