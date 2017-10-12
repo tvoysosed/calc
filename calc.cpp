@@ -1,4 +1,3 @@
-'''
 #include <iostream>
 #include <cmath>
 #include <cctype>
@@ -206,4 +205,3 @@ while (true)
       }
    }
 }
-'''
