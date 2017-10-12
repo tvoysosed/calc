@@ -189,7 +189,7 @@ while (true)
       break;
 
       case '^':
-      pow(a, b, o, opera);
+      pow(a, b, o1, opera);
       break;
 
       case '!':
