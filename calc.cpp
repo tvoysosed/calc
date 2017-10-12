@@ -30,19 +30,20 @@ cout << "Ответ: " << a * b << endl;
 
 void div(int a, int b, char fun[] = "")
 {
+float af = a, bf = b
 fun[0] = '0';
-if (b != 0)
+if (bf != 0)
    {
-   cout << "Ответ: " << a / b << endl;
+   cout << "Ответ: " << af / bf << endl;
    }
    else
    {
-   cout << "На 0 делить нельзя " << endl;
+   cerr << "На 0 делить нельзя " << endl;
    }
 }
 
 void mod(int a, int b, char fun[] = "")
-{
+{ 
 if (b != 0)
    {
    fun[0] = '0';
@@ -50,32 +51,41 @@ if (b != 0)
    }
 else
    {
-   cout << "На 0 делить нельзя" << endl;
+   cerr << "На 0 делить нельзя" << endl;
    }
 }
 
-void pow(int a, int b, int res1, char fun[] = "")
+void pow(int a, int b, float res1, char fun[] = "")
 {
+float af = a, bf = b;
 fun[0] = '0';
-if (b == 0)
+if (bf == 0)
    {
    cout << "Ответ: " << 1 << endl;
    }
-else
+if (bf > 0)
    {
    res1 = 1;
    for (int i = 0; i < b; ++i)
       {
-      res1 = res1 * a;
+      res1 = res1 * af;
       }
    cout << "Ответ: " << res1 << endl;
    }
+if (bf < 0)
+   {
+   res1 = 1;
+   for (int i = 1; int > bf; --i)
+   {
+   res1 = res1 / af;
+   }
+   cout << "Ответ: " << res1 << endl;
 }
 
 void Not(int a, char fun[] = "")
 {
 fun[0] = '0';
-cout << "Ответ: " << !a << endl;
+cout << "Ответ: " << a * (-1) << endl;
 }
 
 void And(int a, int b, int res, char fun[] = "")
@@ -94,14 +104,14 @@ cout << "Ответ: " << res << endl;
 
 void rol(int a, int b, int res, char fun[] = "")
 {
-res = a < 1;
+res = a << 1;
 fun[0] = '0';
 cout << "Ответ: " << res << endl;
 }
 
 void ror(int a, int b, int res, char fun[] = "")
 {
-res = a > 1;
+res = a >> 1;
 fun[0] = '0';
 cout << "Ответ: " << res << endl;
 }
@@ -110,6 +120,7 @@ int main()
 {
 char opera[] = "";
 int o = 0, a, b;
+float o1 = 1;
 char aa[] = "", bb[] = "";
 bool ch1 = false, ch2 = false;
 while (true)
@@ -132,7 +143,7 @@ while (true)
          }
       else
          {
-         cout << "Введите число" << endl;
+         cerr << "Введите число" << endl;
          }
       }
    if ((opera[0] != '!') && (opera[0] != '<') && (opera[0] != '>'))
@@ -149,7 +160,7 @@ while (true)
             }
          else
             {
-            cout << "Введите число" << endl;
+            cerr << "Введите число" << endl;
             }
          }
       }
@@ -200,8 +211,8 @@ while (true)
       case '>':
       ror(a, b, o, opera);
       break;
-
-      return 0;
+    
       }
    }
+return 0;
 }
