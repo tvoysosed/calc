@@ -125,7 +125,7 @@ while (true)
       {
       cout << "Введите первое число" << endl;
       cin >> aa;
-      if ((isdigit(aa[0]) || (isdigit(aa[1])))
+      if (isdigit(aa[0]) || (isdigit(aa[1])))
          {
          a = atoi(aa);
          ch1 = true;
