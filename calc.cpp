@@ -2,10 +2,7 @@
 #include <cstdlib>
 #include <cstring>
 
-   /*   ш
-      {._.}
-       ~|~
-       / \  */
+using namespace std;
 
 void sum(int a, int b) {
 	cout << "Ответ: " << a + b << endl;
